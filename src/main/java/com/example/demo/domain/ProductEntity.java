@@ -25,4 +25,5 @@ public class ProductEntity extends BaseEntity {
 
     @Column
     private Long categoryId;
+
 }

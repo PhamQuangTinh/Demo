@@ -3,6 +3,7 @@ package com.example.demo.rest;
 
 import com.example.demo.dto.UserDTO;
 import com.example.demo.service.UserService;
+import net.minidev.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -29,5 +30,10 @@ public class UserRest {
     @GetMapping("/get/find_by_username")
     public ResponseEntity<?> findUserByUsername(@RequestParam("username") String username){
         return ResponseEntity.ok(userService.findUserByUsernameService(username));
+    }
+
+    @GetMapping("/get/find_by_full_name")
+    public JSONObject findUserByFullName(@RequestParam("full_name") String fullName){
+        return userService.findUsersByFullName(fullName);
     }
 }
