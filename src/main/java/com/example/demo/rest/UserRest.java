@@ -21,6 +21,10 @@ public class UserRest {
 
     }
 
+    @PostMapping("/post/add_new_user_jdbc")
+    public JSONObject addNewUserJDBC(@RequestBody UserDTO request){
+        return userService.addNewUserJDBC(request);
+    }
 
     @GetMapping("/get/find_user_by_id")
     public ResponseEntity<?> findUserByIdController(@RequestParam("id") Long id){

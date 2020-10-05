@@ -38,4 +38,11 @@ public class UserService {
         res.put("List User", listUser);
         return res;
     }
+
+    public JSONObject addNewUserJDBC(UserDTO request) {
+        int res = userJDBCRepository.createNewUser(request);
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("key_res", res);
+        return jsonObject;
+    }
 }

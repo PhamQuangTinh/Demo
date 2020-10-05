@@ -17,6 +17,7 @@ import javax.persistence.Table;
 @Table(name = "user")
 public class UserEntity extends BaseEntity{
 
+
     @Column
     private String username;
 
@@ -28,4 +29,13 @@ public class UserEntity extends BaseEntity{
 
     @Column
     private String phoneNumber;
+
+    public UserEntity(Long id, String fullName, String password, String phoneNumber,
+                      String username){
+        super.id = id;
+        this.password = password;
+        this.fullName = fullName;
+        this.phoneNumber = phoneNumber;
+        this.username = username;
+    }
 }
