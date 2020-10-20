@@ -9,8 +9,5 @@ public class TestBranch {
     public void getSomeThing(){
         System.out.println("man 1");
     }
-    public void okman(){
-
-    }
 
 }
