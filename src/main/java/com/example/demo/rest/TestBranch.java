@@ -6,4 +6,8 @@ public class TestBranch {
         System.out.println("ok mman, boy");
     }
 
+    public void getSomeThing(){
+        System.out.println("man 1");
+    }
+
 }
