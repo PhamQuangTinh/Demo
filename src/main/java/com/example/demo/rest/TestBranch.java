@@ -14,4 +14,8 @@ public class TestBranch {
         System.out.println("ok man 2");
     }
 
+    public void forlopp(){
+        System.out.println("ok man 3");
+    }
+
 }
